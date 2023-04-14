@@ -6,6 +6,12 @@
 
 ## ScreenShot
 
+<img width="500" alt="Screenshot 2023-04-15 at 2 57 53" src="https://user-images.githubusercontent.com/92304761/232172148-1d269668-83d9-45d3-b952-be5f5f2e8d83.png">
+
+
+<img width="500" alt="Screenshot 2023-04-15 at 2 58 10" src="https://user-images.githubusercontent.com/92304761/232172164-1ba653e4-cdcb-4ef2-ada9-ffb44ec1a7a2.png">
+
+
 ---
 
 # Project technology
