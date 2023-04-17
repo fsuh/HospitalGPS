@@ -4,7 +4,7 @@ const path = require("path");
 const express = require("express");
 const app = express();
 
-//const cors = require("cors");
+const cors = require("cors");
 
 // extra security packages
 const helmet = require("helmet");
@@ -25,7 +25,7 @@ app.set("trust proxy", 1);
 
 app.use(express.static(path.resolve(__dirname, "./client/build")));
 app.use(express.json());
-//app.use(cors());
+app.use(cors());
 app.use(helmet());
 app.use(xss());
 
