@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useReducer } from "react";
+import axios from "axios";
 
 import {
   SET_LOADING,
@@ -11,7 +12,9 @@ import {
 
 import reducer from "./reducer";
 
-const API_ENDPOINT = "http://localhost:5010/api/v1/hospital";
+const customFetch = axios.create({ baseURL: "api/v1" });
+
+const API_ENDPOINT = "/hospital";
 
 const initialState = {
   isLoading: true,
@@ -32,8 +35,8 @@ const AppProvider = ({ children }) => {
   const fetchHospitals = async (url) => {
     dispatch({ type: SET_LOADING });
     try {
-      const response = await fetch(url);
-      const data = await response.json();
+      const response = await customFetch.get(url);
+      const { data } = response;
       dispatch({
         type: SET_HOSPITALS,
         payload: {
